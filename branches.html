@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link  rel="stylesheet" href="./branches.css"></link>
+    <script type="module" src="./branches.js"></script>
+
+    <title> Branches - A Branching Narrative Tool</title>
+  </head>
+  <body>
+    <div id="project-name-container" class="projectNameContainer">
+      <div id="project-name">Project Name...</div>
+      <button title="Click To Edit The Project Name" id="name-edit-button" class="editProjectName"></button>
+    </div>
+
+    <button id="return-to-title" class="returnToTitle">Return To Title</button>
+
+    <div id="options-accordian" class="optionsAccordian">Options</div>
+
+    <div id="options-container" class="optionsContainer" style="display: none;">
+      <button id="delete-all-branches" class="option1">Delete All Branches</button>
+      <button id="help-info-button" class="option2">Help</button>
+    </div>
+
+    <div id="help-info" class="helpInfo">
+      <h3>Branches is a tool for creating branching narratives for interactive fiction.</h3>
+      <p>- Start by naming your project at the top of the page by clicking the litte pencil icon below Project Name...</p>    
+      <p>- If you wish to return to the top of the page click the Return To Title button at the top of the page.</p>
+      <p>- To add a branch click the Create a New Branch button at the top left of the page.</p>
+      <p>- Once a branch is created it will appear at the bottom of the page. Click and drag the top tab of the branch to place it where you need on the page.</p>
+      <p>- You can edit the information in the branch by clicking the Edit button or delete it entirely by clicking the Delete button.</p>
+      <p>- To draw a line to another branch click and drag from the Connect button and release it on another branch you wish to connect.</p>
+      <p>- You can delete connected lines by clicking on them.</p>
+      <p>- In Options you can delete all branches in the project.</p>
+      <p>- To see this information again click the Help button in Options.</p>
+      <button class="closeHelpInfo" id="close-help-info" onclick="">close</button>
+    </div>
+
+    <div id="branch-creation-accordian" class="branchCreationAccordian">Create a New Branch</div>
+    
+    <div id="branch-creator" class="branchCreator" style="display: none;">
+      <div>Branch Name</div>
+      <textarea id="branch-name-input" class="branchNameInput"></textarea>
+      <div>Branch Details</div>
+      <textarea id="branch-details-input" class="branchDetailsInput"></textarea>
+      <div></div>
+      <button id="add-branch-button" class="addBranchButton">Add Branch</button>
+    </div>
+
+    <svg id="branch-connector-container" class="branchConnectorContainer"></svg>
+  </body>
+</html>
