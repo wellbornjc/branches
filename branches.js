@@ -1,3 +1,4 @@
+// When you load the page it will center the viewport horizontally with the title at the top.
 window.addEventListener('load', () => {
   const startingViewportXValue = 50000 - (1/2 * window.innerWidth);
   
@@ -20,6 +21,7 @@ let branchAccordianExpanded = 'no';
 
 const nameEditButton = document.getElementById('name-edit-button')
 
+// This opens and closes the input to edit the project name at the top of the page.
 nameEditButton.addEventListener('click', () => {
   const projectName = document.getElementById('project-name');
   
@@ -69,12 +71,14 @@ nameEditButton.addEventListener('click', () => {
 
 const returnToTitleButton = document.getElementById('return-to-title');
 
+// This will center the viewport horizontally with the title at the top (like when you loaded the page initially).
 returnToTitleButton.addEventListener('click', () => {
   const startingViewportXValue = 50000 - (1/2 * window.innerWidth);
   
   window.scrollTo(startingViewportXValue, 0);
 });
 
+// This displays or hides the branch creation accordian.
 branchCreationAccordian.addEventListener('click', () => {
   if (branchAccordianExpanded === 'no') {
     branchAccordianExpanded = 'yes';
@@ -112,6 +116,7 @@ const optionsContainer = document.getElementById('options-container');
 
 let optionsAccordianExpanded = 'no';
 
+// This displays or hides the options accordian.
 optionsAccordian.addEventListener('click', () => {
   if (optionsAccordianExpanded === 'no') {
     optionsAccordianExpanded = 'yes';
@@ -143,6 +148,7 @@ function clickOffOptions(event) {
 
 document.addEventListener('mousedown', clickOffOptions);
 
+// This handles the creation of a new branch element using the inputs fom the branch creation accordian.
 addBranchButton.addEventListener('click', () => {
   const newBranchNameInput = document.getElementById('branch-name-input');
   const newBranchName = newBranchNameInput.value;
@@ -192,6 +198,7 @@ addBranchButton.addEventListener('click', () => {
       document.addEventListener('mouseup', releaseTab);
     };
 
+    // These handle the clicking, dragging, and releasing of the tab at the top of a branch setting where its new position on the screen will be.
     function dragTab(e) {
       branchDragTab.innerText = '. . .';
       branchDragTab.style.fontStyle = 'bolder';
@@ -233,6 +240,7 @@ addBranchButton.addEventListener('click', () => {
     const branchEditButtonId = `branch-edit-button-${branch.id}`
     const branchEditButton = document.getElementById(branchEditButtonId)
 
+    // This allows for the editing of the information in a specific created branch.
     branchEditButton.addEventListener('click', () => {
       const branchNameId = `branch-name-${branch.id}`
       const branchName = document.getElementById(branchNameId);
@@ -301,6 +309,7 @@ addBranchButton.addEventListener('click', () => {
     
     branchConnectButton.addEventListener('mousedown', clickedConnect)
     
+    // These handle the clicking, dragging, and releasing of the connect button on a created branch to allow you to draw lines between branches using SVG.
     function clickedConnect(e) {
       const clickedBranchId = e.target.id;
 
@@ -373,6 +382,7 @@ addBranchButton.addEventListener('click', () => {
     const branchDeleteButtonId = `branch-delete-button-${branch.id}`;
     const branchDeleteButton = document.getElementById(branchDeleteButtonId);
 
+    // Allows for the deletion of a branch after confirming on a popup.
     branchDeleteButton.addEventListener('click', (e) => {
       document.body.style.overflow = 'hidden';
 
@@ -433,6 +443,7 @@ addBranchButton.addEventListener('click', () => {
 
 const deleteAllBranchesButton = document.getElementById('delete-all-branches');
 
+// Allows for the deletion of all created branches after confirming on a popup.
 deleteAllBranchesButton.addEventListener('click', () => {
   optionsAccordianExpanded = 'no';
 
@@ -500,6 +511,7 @@ deleteAllBranchesButton.addEventListener('click', () => {
 const helpInfoButton = document.getElementById('help-info-button');
 const helpInfo = document.getElementById('help-info');
 
+// Redisplays the help info that was displayed when you first loaded the page.
 helpInfoButton.addEventListener('click', () => {
   optionsAccordianExpanded = 'no';
 
