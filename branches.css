@@ -64,7 +64,7 @@ body {
 }
 
 .editProjectName:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .returnToTitle {
@@ -81,7 +81,8 @@ body {
 }
 
 .returnToTitle:hover {
-  background-color: rgb(216, 216, 216);
+  background-color: black;
+  color: white;
 }
 
 .optionsAccordian {
@@ -168,7 +169,8 @@ body {
 }
 
 .yesDeleteAllBranches:hover {
-  opacity: 0.8;
+  background-color: black;
+  color: white;
 }
 
 .noDeleteAllBranches {
@@ -179,7 +181,8 @@ body {
 }
 
 .noDeleteAllBranches:hover {
-  opacity: 0.8;
+  background-color: black;
+  color: white;
 }
 
 .option2 {
@@ -226,7 +229,8 @@ body {
 }
 
 .closeHelpInfo:hover {
-  opacity: 0.8;
+  background-color: black;
+  color: white;
 }
 
 .option3:hover {
@@ -349,7 +353,7 @@ body {
   border: solid;
   text-align: center;
   font-style: italic;
-  background-color: rgb(191, 148, 106);
+  background-color: rgb(232, 191, 151);
   padding-bottom: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -369,7 +373,7 @@ body {
   position: absolute;
   left: 0%;
   width: 150px;
-  background-color: rgb(129, 129, 197);
+  background-color: rgb(170, 170, 253);
 }
 
 .branchEditButton:hover {
@@ -381,7 +385,7 @@ body {
   position: absolute;
   right: 0%;
   width: 150px;
-  background-color: rgb(214, 57, 57);
+  background-color: rgb(255, 115, 115);
 }
 
 .branchDeleteButton:hover {
@@ -412,7 +416,8 @@ body {
 }
 
 .yesDeleteBranch:hover {
-  opacity: 0.8;
+  background-color: black;
+  color: white;
 }
 
 .noDeleteBranch {
@@ -423,7 +428,8 @@ body {
 }
 
 .noDeleteBranch:hover {
-  opacity: 0.8;
+  background-color: black;
+  color: white;
 }
 
 .branchConnectButton {
@@ -432,7 +438,7 @@ body {
   left: 50%;
   margin-left: -75px;
   width: 150px;
-  background-color: rgb(108, 187, 125);
+  background-color: rgb(145, 227, 163);
 }
 
 .branchConnectButton:hover {
